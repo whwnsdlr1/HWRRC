@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+	
+      
+	    <com.remotecontrol.PaintBoard
+	        android:id="@+id/paintBorad"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	         >
+	   	</com.remotecontrol.PaintBoard>
+		    
+	   	<ImageButton
+	          android:id="@+id/button_radio_on"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:padding="20dp"
+	          android:background="#00000000"
+	          android:src="@drawable/button_radio_on"/>
+	      
+	 	<EditText
+		       android:id="@+id/decisionResult" 
+		       android:layout_width="fill_parent"
+		       android:layout_height="70dp"
+		       android:paddingLeft="20dp"
+		       android:hint="인식된 결과"
+		       android:inputType="none"
+		       android:editable="false"   
+		       android:background="#55ffffff"
+		       android:singleLine="true"
+		       android:layout_gravity="bottom|left"
+		       android:textSize="45sp"
+	       />
+	    
+	 	<LinearLayout 
+	 	    android:layout_width="wrap_content"
+		    android:layout_height="fill_parent"
+		    android:orientation="horizontal"
+		    android:layout_gravity="right">
+
+	 		<ImageButton
+	 		    android:id="@+id/button_close2"
+	 		    android:layout_width="wrap_content"
+	 		    android:layout_height="wrap_content"
+	 		    android:background="#00000000"
+	 		    android:padding="20dp"
+	 		    android:src="@drawable/button_close2" />
+		    
+	 	    <ImageButton  
+				android:id="@+id/openRcBtn"
+			    android:layout_width="wrap_content" 
+			    android:layout_height="150dp"
+			    android:layout_gravity="center_vertical"
+			    android:background="#00000000"
+			    android:src="@drawable/left_arrow"
+		    />
+	 	    
+	 	    
+		   	<LinearLayout 
+			       android:id="@+id/rightController"
+			       android:layout_width="400dp"
+			       android:layout_height="fill_parent"
+			       android:orientation="vertical"
+			       android:visibility="gone"
+			       android:background="#FF000000"
+			       android:padding="4dp">
+		      
+		  
+			    <LinearLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal"
+			        >
+			      	
+			        <EditText
+				        android:id="@+id/findChannel" 
+				        android:layout_width="290dp"
+				        android:layout_height="wrap_content"
+				        android:hint="검색어를 입력하세요"
+				        android:imeOptions="actionDone"   
+				        android:singleLine="true"
+				        android:layout_marginLeft="10dp"
+				        android:layout_marginTop="40dp"
+			        	android:layout_marginBottom="10dp"
+				        />
+			    
+		        
+				    <ImageButton 
+				        android:id="@+id/button_find"
+				        android:layout_width="60dp"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="15dp"
+				        android:layout_marginRight="20dp"
+				         android:layout_marginTop="30dp"
+				   		android:background="@drawable/button_find"	       
+				        />
+			    
+				</LinearLayout> 
+		    
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        android:layout_marginTop="40dp"
+		        android:layout_marginLeft="10dp"
+		        android:layout_marginRight="10dp"
+		         >
+				
+				<TextView 
+				    android:id="@+id/commandView"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="25sp"
+			        android:text="명령어 창"
+			        android:singleLine="true"
+			        android:layout_weight="1"/>
+			    
+			    <TextView 
+			        android:id="@+id/bluetoothState"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textSize="25sp"
+			        android:text="블루투스 상태"
+			        android:singleLine="true"
+			        android:layout_weight="1"/>
+			</LinearLayout> 
+			
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        android:layout_marginTop="50dp" >
+				
+		        <LinearLayout 
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:gravity="center"
+		            android:layout_weight="1"
+		            >
+		            
+		            <ImageButton
+			            android:id="@+id/prevSkip"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1"
+			            android:background="#00000000"
+			            android:src="@drawable/button_prevskip" />
+		                    
+			         <ImageButton
+			            android:id="@+id/volumeUp"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1"
+			            android:background="#00000000"
+			            android:src="@drawable/button_volup" />
+		         
+			        <ImageButton
+			            android:id="@+id/nextSkip"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1"
+			            android:background="#00000000"
+			            android:src="@drawable/button_nextskip" /> 
+		            
+		        </LinearLayout>
+		        
+		         <LinearLayout 
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:gravity="center"
+		            android:layout_weight="1"
+		           >
+		        
+			         <ImageButton
+			            android:id="@+id/prevTrack"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1"
+			            android:background="#00000000"
+			            android:src="@drawable/button_prevtrack" />
+			         
+			         
+			         <ImageButton
+			            android:id="@+id/playNstopBtn"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1"
+			            android:background="#00000000"
+			            android:src="@drawable/button_stop" />
+			
+			         <ImageButton
+			            android:id="@+id/nextTrack"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1"
+			            android:background="#00000000"
+			            android:src="@drawable/button_nexttrack" />
+		
+		        </LinearLayout>
+		
+		        <LinearLayout 
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal"
+		            android:gravity="center"
+		            android:layout_weight="1"
+		            >
+			         
+		           <ImageButton
+			            android:id="@+id/closeBtn"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1"
+			            android:background="#00000000"
+			            android:src="@drawable/button_close" />
+		           
+					<ImageButton
+			            android:id="@+id/volumeDown"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1"
+			            android:background="#00000000"
+			            android:src="@drawable/button_voldown" />
+					
+					<ImageButton
+					    android:id="@+id/previewBtn"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1"
+			            android:background="#00000000"
+			            android:src="@drawable/button_preview" />
+		        	
+				</LinearLayout>
+		        
+		
+		        
+		
+		    </LinearLayout>
+		  </LinearLayout>
+  
+    </LinearLayout>
+    
+</FrameLayout>
