@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<com.RemoteMediaPlayer.RemotePlayerSurfaceView
+		android:id="@+id/surface"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center">
+	</com.RemoteMediaPlayer.RemotePlayerSurfaceView>
+	
+	<LinearLayout 
+	    android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		>
+	    
+	    <TextView
+			android:id="@+id/playerInfo"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="50dp"
+			android:layout_marginLeft="30dp"
+			android:textStyle="bold"
+			android:textSize="45sp"
+			android:textColor="#FF00FF00"
+			android:text=""
+		/>
+	    
+	</LinearLayout>
+	
+	
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+	>
+		<FrameLayout
+			android:id="@+id/bottom_panel"
+			android:layout_height="120dp"
+			android:layout_width="fill_parent"
+			android:orientation="horizontal"
+			android:background="#88000000"
+			android:layout_alignParentBottom="true"
+		>
+			<LinearLayout
+				android:layout_gravity="bottom"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="15dp"
+			>
+				<TextView
+					android:id="@+id/text_current_play_title"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="2"
+					android:textStyle="bold"
+					android:textColor="#FFFFFF00"
+					android:textSize="20sp"
+					android:text=""
+					android:singleLine="true"
+					android:paddingTop="5dp"
+					android:paddingLeft="20dp"
+				/>
+				<SeekBar android:id="@+id/player_volume"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:max="30"
+					android:progress="15"
+					android:paddingLeft="20dp"
+					android:paddingRight="20dp"
+					android:thumb="@drawable/button_playbar"
+					style="@style/MyCustomProgressStyle"
+				/>
+			</LinearLayout>
+			<LinearLayout
+				android:layout_gravity="top"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+			>
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:layout_marginLeft="10dp"
+				>
+					<TextView
+						android:id="@+id/text_playtime_current"
+						android:layout_width="80dp"
+						android:layout_height="wrap_content"
+						android:textStyle="bold"
+						android:textSize="20sp"
+						android:textColor="#FF00A2FF"
+						android:text=""
+					/>
+										
+					<TextView
+						android:id="@+id/text_playtime_max"
+						android:layout_width="80dp"
+						android:layout_height="wrap_content"
+						android:textStyle="bold"
+						android:textSize="20sp"
+						android:textColor="#FF00A2FF"
+						android:text=""
+					/>
+				</LinearLayout>
+				<ImageButton android:id="@+id/button_play_prev_track"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:src="@drawable/button_prevtrack"
+					android:background="#00000000"
+					android:layout_marginLeft="40dp"
+				/>
+							
+				<ImageButton android:id="@+id/button_play_prev"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:src="@drawable/button_prevskip"
+					android:background="#00000000"
+					android:layout_marginLeft="20dp"
+				/>
+				<ImageButton android:id="@+id/button_play_pause"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:src="@drawable/button_stop"
+					android:background="#00000000"
+					android:layout_marginLeft="20dp"
+					android:layout_marginRight="20dp"
+				/>
+				<ImageButton android:id="@+id/button_play_next"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:src="@drawable/button_nextskip"
+					android:background="#00000000"
+					android:layout_marginRight="20dp"
+				/>
+				
+				<ImageButton android:id="@+id/button_play_next_track"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:src="@drawable/button_nexttrack"
+					android:background="#00000000"
+					android:layout_marginRight="20dp"
+				/>
+				
+				<ImageButton android:id="@+id/button_open"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:src="@drawable/button_open"
+					android:background="#00000000"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="20dp"
+				/>
+				
+			</LinearLayout>
+
+		</FrameLayout>
+				
+		<FrameLayout
+			android:id="@+id/top_panel"
+			android:layout_height="90dp"
+			android:layout_width="fill_parent"
+			android:orientation="horizontal"
+			android:background="#88000000"
+			android:layout_alignParentTop="true"
+		>
+			<SeekBar   
+			   	android:id="@+id/timeline"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center|top"
+				android:paddingLeft="50dp"
+				android:paddingRight="50dp"
+				android:layout_marginTop="30dp"
+				android:thumb="@drawable/button_playbar"
+				style="@style/MyCustomProgressStyle"
+			/>
+			<TextView
+					android:id="@+id/command_text"
+					android:layout_width="200dp"
+					android:layout_height="wrap_content"
+					android:textStyle="bold"
+					android:textSize="16sp"
+					android:text=""
+					android:singleLine="true"
+					android:paddingTop="5dp"
+					android:paddingLeft="10dp"
+				/>
+			
+			<TextView
+					android:id="@+id/bluetooth_state"
+					android:layout_width="200dp"
+					android:layout_height="wrap_content"
+					android:textStyle="bold"
+					android:textSize="16sp"
+					android:text=""
+					android:singleLine="true"
+					android:paddingTop="5dp"
+					android:paddingLeft="10dp"
+					android:layout_gravity="right"
+				/>
+			
+			
+		</FrameLayout>
+	</RelativeLayout>
+	
+	
+	<ProgressBar
+		android:id="@+id/vodplayer_loading_progress"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content"    
+        android:layout_gravity="center"
+    />
+</FrameLayout>

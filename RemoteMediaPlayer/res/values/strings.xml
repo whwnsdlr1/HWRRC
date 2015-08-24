@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, VodPlayer!</string>
+    <string name="app_name">Remote Player</string>
+    
+     <!--  Bluetooth -->
+    <string name="send">Send</string>
+    <string name="not_connected">장치에 연결 안됨</string>
+    <string name="bluetooth_on">블루투스 켜짐</string>
+    <string name="bt_not_enabled_leaving">블루투스를 사용할 수 없습니다.</string>
+    <string name="title_connecting">연결 중...</string>
+    <string name="title_connected_to">연결 됨: </string>
+    <string name="title_not_connected">연결 안됨</string>
+
+</resources>
